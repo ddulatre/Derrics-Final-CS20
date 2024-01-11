@@ -188,6 +188,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b8cvs"]
+height = 26.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(3, 3)
@@ -195,11 +196,12 @@ script = ExtResource("1_jbxx5")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(94, 156.333)
+position = Vector2(92.6667, 156.833)
+scale = Vector2(0.916667, 0.96874)
 sprite_frames = SubResource("SpriteFrames_wbnwp")
 autoplay = "default"
 frame_progress = 0.335519
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(94.5, 157.833)
+position = Vector2(93.3333, 159.667)
 shape = SubResource("CapsuleShape2D_b8cvs")
