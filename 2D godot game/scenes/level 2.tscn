@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://c4qxv4e6bklvx" path="res://Green.png" id="2_ywxj4"]
 [ext_resource type="Texture2D" uid="uid://dhj23pgdr8b73" path="res://Terrain (16x16).png" id="3_de0m6"]
 [ext_resource type="PackedScene" uid="uid://b38lsptprrmib" path="res://scenes/Main Character.tscn" id="4_eyknn"]
-[ext_resource type="Script" path="res://scenes/pineapple.gd" id="5_cjfqw"]
 [ext_resource type="PackedScene" uid="uid://skwhdjxjq8w2" path="res://scenes/pineapple.tscn" id="5_o2t6n"]
 [ext_resource type="PackedScene" uid="uid://l0tb0hyrbhx0" path="res://scenes/finish.tscn" id="6_58o28"]
+[ext_resource type="PackedScene" uid="uid://b4356rfy2bfua" path="res://scenes/main_menu.tscn" id="7_gmff0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q00ks"]
 texture = ExtResource("3_de0m6")
@@ -506,7 +506,6 @@ position_smoothing_enabled = true
 position_smoothing_speed = 7.0
 
 [node name="Pineapple Group" type="Node" parent="SceneObjects"]
-script = ExtResource("5_cjfqw")
 
 [node name="Pineapple" parent="SceneObjects/Pineapple Group" instance=ExtResource("5_o2t6n")]
 position = Vector2(340, 412)
@@ -601,8 +600,21 @@ position = Vector2(1054, -743)
 [node name="Pineapple31" parent="SceneObjects/Pineapple Group" instance=ExtResource("5_o2t6n")]
 position = Vector2(958, -334)
 
+[node name="Pineapple32" parent="SceneObjects/Pineapple Group" instance=ExtResource("5_o2t6n")]
+position = Vector2(-7, -261)
+
+[node name="Pineapple33" parent="SceneObjects/Pineapple Group" instance=ExtResource("5_o2t6n")]
+position = Vector2(1419, -649)
+
+[node name="Pineapple34" parent="SceneObjects/Pineapple Group" instance=ExtResource("5_o2t6n")]
+position = Vector2(1684, 607)
+
+[node name="Pineapple35" parent="SceneObjects/Pineapple Group" instance=ExtResource("5_o2t6n")]
+position = Vector2(2091, 800)
+
 [node name="Finish" parent="SceneObjects" instance=ExtResource("6_58o28")]
 position = Vector2(2908, 459)
+target_level = ExtResource("7_gmff0")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
@@ -627,15 +639,3 @@ theme_override_font_sizes/font_size = 42
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Pineapple" parent="." instance=ExtResource("5_o2t6n")]
-position = Vector2(-7, -261)
-
-[node name="Pineapple2" parent="." instance=ExtResource("5_o2t6n")]
-position = Vector2(1419, -649)
-
-[node name="Pineapple3" parent="." instance=ExtResource("5_o2t6n")]
-position = Vector2(1684, 607)
-
-[node name="Pineapple4" parent="." instance=ExtResource("5_o2t6n")]
-position = Vector2(2091, 800)
